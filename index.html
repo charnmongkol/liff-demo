@@ -70,7 +70,6 @@
 
       async function getUserProfile() {
         const profile = await liff.getProfile();
-        console.log("1");
         document.getElementById("pictureUrl").src = profile.pictureUrl;
         document.getElementById("userId").append(profile.userId);
         document.getElementById("displayName").append(profile.displayName);
@@ -96,7 +95,6 @@
 
       async function main() {
         const init = await liff.init({ liffId: "1660806822-nwa8VvQj" });
-        console.log(init);
         getEnvironment();
         getUserProfile();
         // getContext()
