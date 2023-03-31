@@ -67,10 +67,11 @@
 
       async function getUserProfile() {
         const profile = await liff.getProfile();
+        console.log(profile);
         document.getElementById("pictureUrl").src = profile.pictureUrl;
-        document.getElementById("userId").src = profile.userId;
-        document.getElementById("displayName").src = profile.displayName;
-        document.getElementById("statusMessage").src = profile.statusMessage;
+        document.getElementById("userId").append(profile.userId);
+        document.getElementById("displayName").append(profile.displayName);
+        document.getElementById("statusMessage").append(profile.statusMessage);
       }
 
       //ดึงค่ามาdisplay
